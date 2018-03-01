@@ -1,0 +1,19 @@
+image: ubuntu
+
+artifacts:
+- path: MySampleNuGetLib
+- path: MySampleNuGetLib.sln
+
+deploy:
+- provider: FTP
+  host: waws-prod-bay-003.ftp.azurewebsites.windows.net
+  protocol: ftp
+  username: ftp-test\$ftp-test
+  password:
+    secure: QK/04+2Xw6GiUwVtVTBGoWMzL2OITqOo6jtE+LbtFYYY7vSSz/eWB2I0IgvodT9tIsfh/2K15feUhIiOL2cNFg==
+  folder: /site/wwwroot
+  artifact: MySampleNuGetLib.sln
+  application: MySampleNuGetLib
+
+build: off
+test: off
