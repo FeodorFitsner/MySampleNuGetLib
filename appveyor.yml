@@ -2,7 +2,9 @@ image: ubuntu
 
 artifacts:
 - path: MySampleNuGetLib
+  name: my_app
 - path: MySampleNuGetLib.sln
+  name: my_file
 
 deploy:
 - provider: FTP
@@ -12,8 +14,8 @@ deploy:
   password:
     secure: QK/04+2Xw6GiUwVtVTBGoWMzL2OITqOo6jtE+LbtFYYY7vSSz/eWB2I0IgvodT9tIsfh/2K15feUhIiOL2cNFg==
   folder: /site/wwwroot
-  artifact: MySampleNuGetLib.sln
-  application: MySampleNuGetLib
+  artifact: my_file
+  application: my_app
 
 build: off
 test: off
