@@ -16,6 +16,7 @@ deploy:
   folder: /site/wwwroot
   artifact: my_file
   application: my_app
+  debug: true
 
 build: off
 test: off
